@@ -13,7 +13,7 @@ body {
   gap: 40px;
 }
 
-/* Sidebar (Personal Info) */
+/* Sidebar for Personal Info */
 .personal-info {
   flex: 1;
   background: #1a1a1a;
@@ -26,10 +26,10 @@ body {
   max-height: calc(100vh - 40px);
 }
 
-/* Header with Background Image */
+/* Header */
 header {
   position: relative;
-  background: url("header.jpg") no-repeat center center;
+  background: url("res/header.jpg") no-repeat center center;
   background-size: cover;
   color: white;
   border-radius: 10px;
@@ -37,7 +37,7 @@ header {
   text-align: center;
 }
 
-/* Overlay for better text visibility */
+/* Overlay */
 header::before {
   content: "";
   position: absolute;
@@ -55,7 +55,7 @@ header p {
   z-index: 1;
 }
 
-/* Bio Section with Centered Profile Image */
+/* Bio Section */
 .bio-section {
   margin-top: 30px;
   padding: 15px;
@@ -105,7 +105,7 @@ header p {
   margin: 0;
 }
 
-/* Contact Section Styles */
+/* Contact Section */
 .contact-section {
   margin-top: 30px;
   padding: 20px;
@@ -159,7 +159,6 @@ header p {
   transform: translateY(-2px);
 }
 
-/* For email and phone that should take full width */
 .contact-info a:nth-child(3),
 .contact-info a:nth-child(4),
 .contact-info span:last-child {
@@ -399,7 +398,7 @@ header p {
   background: #444;
 }
 
-/* Media queries for responsive design */
+/* Media queries for responsiveness */
 @media (max-width: 992px) {
   .container {
     flex-direction: column;
