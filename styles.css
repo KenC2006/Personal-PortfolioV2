@@ -242,6 +242,12 @@ header p {
   overflow: hidden;
 }
 
+.project-details.expanded,
+.experience-details.expanded {
+  max-height: none; /* Remove the 500px limit */
+  margin-top: 15px;
+}
+
 .project-card:hover {
   transform: scale(1.03);
 }
@@ -300,6 +306,26 @@ header p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.github-link {
+  margin-top: 15px;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.github-btn:hover {
+  background: #4078c0;
 }
 
 /* Experience Card with Logo */
