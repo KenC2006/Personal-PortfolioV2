@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #0d1117;
+  background-color: #000000;
   color: white;
   padding: 20px;
   margin: 0;
@@ -176,7 +176,7 @@ header p {
   margin-bottom: 10px;
   top: 20px;
   z-index: 100;
-  background-color: #0d1117;
+  background-color: #000000;
   padding: 10px 0;
 }
 
