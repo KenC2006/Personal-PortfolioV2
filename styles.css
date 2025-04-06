@@ -72,7 +72,7 @@ header p {
 .profile-image-container {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 10%;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -93,7 +93,6 @@ header p {
 }
 
 .bio-section h2 {
-  color: #ff6a00;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3rem;
@@ -114,7 +113,6 @@ header p {
 }
 
 .contact-section h2 {
-  color: #ff6a00;
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.3rem;
@@ -130,7 +128,6 @@ header p {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: #ff6a00;
   border-radius: 2px;
 }
 
@@ -154,7 +151,6 @@ header p {
 }
 
 .contact-link:hover {
-  color: #ff6a00;
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
@@ -226,8 +222,11 @@ header p {
 .timeframe {
   float: right;
   color: #aaa;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 
 /* Project Card Styles */
@@ -259,7 +258,6 @@ header p {
 
 .project-header h3 {
   margin: 0 0 5px 0;
-  color: #ff6a00;
   display: inline-block;
 }
 
@@ -296,10 +294,12 @@ header p {
 .project-image-container {
   width: 120px;
   height: 120px;
-  border-radius: 8px;
+  border-radius: 10%;
   overflow: hidden;
   flex-shrink: 0;
   align-self: flex-start;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
 }
 
 .project-img {
@@ -374,7 +374,6 @@ header p {
 
 .experience-title h3 {
   margin: 0 0 5px 0;
-  color: #ff6a00;
   display: inline-block;
 }
 
