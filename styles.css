@@ -234,7 +234,7 @@ header p {
   justify-content: space-between;
 }
 
-/* Timeframe styles */
+/* Timeframe Stuff */
 .timeframe {
   float: right;
   color: #aaa;
@@ -431,6 +431,7 @@ header p {
 }
 
 /* Media queries for responsiveness */
+/* For tablets and smaller laptops */
 @media (max-width: 992px) {
   .container {
     padding: 10px;
@@ -445,9 +446,24 @@ header p {
   .experience-card {
     flex: 1 1 100%;
   }
+
+  .header-content h1 {
+    font-size: 3rem;
+  }
+
+  .project-grid,
+  .experience-grid {
+    flex-direction: column;
+  }
 }
 
+/* For larger phones and small tablets */
 @media (max-width: 768px) {
+  .header-contact {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
   .contact-info {
     grid-template-columns: 1fr;
   }
@@ -457,10 +473,145 @@ header p {
   .contact-info span:last-child {
     grid-column: auto;
   }
+
+  .bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image-container {
+    margin: 0 auto 15px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .tab-btn {
+    padding: 12px 0;
+    font-size: 16px;
+    white-space: nowrap;
+    min-width: 100px;
+  }
+
+  header {
+    height: auto;
+    padding: 15px 10px 25px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    transform: none;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .title-location {
+    align-items: center;
+  }
+
+  .timeframe {
+    float: none;
+    display: inline-block;
+    margin-top: 5px;
+  }
 }
 
+/* For smaller phones */
 @media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
   .header-contact {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-contact-link {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-content {
+    margin-right: 0;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p,
+  .location {
+    font-size: 1rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    margin-bottom: 10px;
+  }
+
+  .toggle-details {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .github-btn {
+    display: block;
+    text-align: center;
+  }
+
+  .personal-info,
+  .bio-section,
+  .project-card,
+  .experience-card {
+    padding: 15px;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 400px) {
+  .header-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .project-header h3,
+  .experience-title h3 {
+    font-size: 1.2rem;
   }
 }
