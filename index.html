@@ -150,13 +150,14 @@
                 Toronto with a keen interest in all things tech. When I'm not
                 coding or tinkering with random projects, you can probably catch
                 me playing tennis or fishing. PS: If you got a good fishing
-                spot? Let me know! 🎣
+                spot, let me know! 🎣
               </p>
             </div>
           </div>
         </section>
       </section>
 
+      <!-- Projects and Experiences -->
       <main class="content">
         <section class="tabs" id="sticky-tabs">
           <button class="tab-btn active" onclick="showTab('projects')">
@@ -180,35 +181,38 @@
                 </div>
                 <div class="project-preview">
                   <p>
-                    Instagram web scraper tracking discrepancies between
+                    Instagram webscraper that reports discrepancies between
                     followers and following.
                   </p>
                 </div>
                 <div class="project-details">
                   <p>
-                    Got bored during winter break so made something to solve
+                    Got bored during winter break so I made something to solve
                     crippling insecurity. Originally, I was going to use
-                    beautifulsoup for quick and easy get-requests but Instagram
-                    blocks them (go figure). I ended up using a proxy browser to
-                    manually find and collect follow data. The process is as
-                    follows:
+                    beautifulsoup get-requests but Instagram blocks them (go
+                    figure). I ended up using a proxy browser to manually find,
+                    collect, and scroll follow data. To do this, the program:
                   </p>
                   <ul>
+                    <li>opens a window and prompts user for login info</li>
                     <li>
-                      application opens a window and prompts user for login info
+                      logs in and redirects to profile page to access follower
+                      and following counts
                     </li>
                     <li>
-                      logs in - enters profile page - opens follower and
-                      following counts - scrolls table
+                      Scrolls both tables to the bottom and reads html for all
+                      profile names
                     </li>
                     <li>
-                      reads html for all profile names and compares follower and
-                      following names for discrepancies
+                      Stores them two seperate lists to compares for
+                      discrepancies
                     </li>
                   </ul>
                   <p>
-                    Definitely easier to just use Instagam's in-house API but I
-                    wanted to test out webscrapping~.
+                    <i>
+                      Definitely easier to just use Instagam's in-house API but
+                      I wanted to try out Selenium~.
+                    </i>
                   </p>
                 </div>
                 <button class="toggle-details">See More</button>
@@ -253,7 +257,7 @@
                 <div class="project-header">
                   <h3>DeadKnight</h3>
                   <span class="timeframe">Apr 2024 - June 2024</span>
-                  <p class="project-tech">Java, Swing, GameDev</p>
+                  <p class="project-tech">Java Swing, GameDev</p>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -264,9 +268,11 @@
                 </div>
                 <div class="project-details">
                   <p>
-                    The project had over 10 thousand lines of code and 30+
-                    classes. Maps and asserts were drawn by a friend and game
-                    inspiration was taken from DeadCells and Hollow Knight.
+                    The project has over 10 thousand lines of code and 30+
+                    classes. Maps and asserts are drawn by a friend and game
+                    inspiration was taken from DeadCells and Hollow Knight. To
+                    see controls and more details on a ton of game features,
+                    check the GitHub.
                   </p>
                 </div>
                 <button class="toggle-details">See More</button>
@@ -317,8 +323,8 @@
                 </div>
                 <div class="project-preview">
                   <p>
-                    Infinity cube made using an ESP32 board, WLED library, two
-                    way acrylic mirrors, and LED strips.
+                    Infinity cube made using an ESP32 board, the WLED library,
+                    two way acrylic mirrors, and LED strips.
                   </p>
                 </div>
                 <div class="project-details">
@@ -388,6 +394,125 @@
                   alt="Infinity Cube"
                   class="project-img"
                 />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>Super Smash Blocks</h3>
+                  <span class="timeframe">June 2023 - July 2023</span>
+                  <p class="project-tech">Java Swing, JavaFX</p>
+                </div>
+                <div class="project-preview">
+                  <p>
+                    Super Smash Bros like game that implements stun, damage, and
+                    combo mechanics.
+                  </p>
+                </div>
+                <div class="project-details">
+                  <p>
+                    Super Smash Blocks is a passion project made over the summer
+                    to kill some time. Its the first time I worked on a
+                    relatively large OOP project and was a ton of fun to code.
+                    Hopefully its crude enough to avoid Nintendo.
+                  </p>
+                </div>
+                <button class="toggle-details">See More</button>
+                <div class="github-link">
+                  <a
+                    href="https://github.com/KenC2006/SuperSmashBlocks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="github-btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="margin-right: 5px"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="project-image-container">
+                <img
+                  src="res/smash.png"
+                  alt="Super Smash"
+                  class="project-img"
+                />
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>RC Car</h3>
+                  <span class="timeframe">Apr 2022 - Mar 2022</span>
+                  <p class="project-tech">
+                    Arduino, C++, Bluetooth, AppDev, Soldering
+                  </p>
+                </div>
+                <div class="project-preview">
+                  <p>
+                    Remote control car made with Arduino and bluetooth mobile
+                    app.
+                  </p>
+                </div>
+                <div class="project-details">
+                  <p>
+                    Parts included wires, a 12V battery cartridge, 4 DC motors,
+                    a HC-05 chip (bluetooth receiver), Arduino UNO, and L298N
+                    motor driver chip. The wires from the DC motors on each side
+                    were grouped together and connected to the corresponding
+                    ports on the dual motor driver chip. For Bluetooth control,
+                    I developed an app using MIT App Inventor to simplify
+                    pairing and communication. The app sent specific text
+                    commands when buttons were pressed, which the Arduino
+                    interpreted to control the motors accordingly. For a full
+                    document breakdown, visit the GitHub.
+                  </p>
+                </div>
+                <button class="toggle-details">See More</button>
+                <div class="github-link">
+                  <a
+                    href="https://github.com/KenC2006/RC_car"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="github-btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="margin-right: 5px"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="project-image-container">
+                <img src="res/car.png" alt="RC Car" class="project-img" />
               </div>
             </div>
           </div>
