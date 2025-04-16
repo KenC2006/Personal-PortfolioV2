@@ -464,6 +464,7 @@ header p {
     flex-wrap: wrap;
     gap: 8px;
   }
+
   .contact-info {
     grid-template-columns: 1fr;
   }
