@@ -147,10 +147,9 @@
               <h2>About Me</h2>
               <p>
                 Hey there! I'm a student studying comp eng at the University of
-                Toronto with a keen interest in all things tech. When I'm not
-                coding or tinkering with random projects, you can probably catch
-                me playing tennis or fishing. PS: If you got a good fishing
-                spot, let me know! 🎣
+                Toronto with an interest in all things tech. When I'm not coding
+                or messing with some random project, you can probably catch me
+                gaming, fishing, or playing tennis.
               </p>
             </div>
           </div>
@@ -175,9 +174,12 @@
                 <div class="project-header">
                   <h3>InScraper</h3>
                   <span class="timeframe">Dec 2025</span>
-                  <p class="project-tech">
-                    Python, Selenium, Tkinter, Javascript
-                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag language">Python</span>
+                    <span class="tech-tag library">Selenium</span>
+                    <span class="tech-tag frontend">Tkinter</span>
+                    <span class="tech-tag frontend">Javascript</span>
+                  </div>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -215,7 +217,6 @@
                     </i>
                   </p>
                 </div>
-                <button class="toggle-details">See More</button>
                 <div class="github-link">
                   <a
                     href="https://github.com/KenC2006/InScraper"
@@ -257,7 +258,10 @@
                 <div class="project-header">
                   <h3>DeadKnight</h3>
                   <span class="timeframe">Apr 2024 - June 2024</span>
-                  <p class="project-tech">Java Swing, GameDev</p>
+                  <div class="project-tech">
+                    <span class="tech-tag language">Java Swing</span>
+                    <span class="tech-tag frontend">GameDev</span>
+                  </div>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -275,7 +279,6 @@
                     features, check out the GitHub.
                   </p>
                 </div>
-                <button class="toggle-details">See More</button>
                 <div class="github-link">
                   <a
                     href="https://github.com/KenC2006/DeadKnight"
@@ -317,9 +320,12 @@
                 <div class="project-header">
                   <h3>Infinity Cube</h3>
                   <span class="timeframe">June 2023 - July 2023</span>
-                  <p class="project-tech">
-                    Arduino, C++, Fusion 360, Soldering
-                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag frontend">Arduino</span>
+                    <span class="tech-tag frontend">C++</span>
+                    <span class="tech-tag frontend">Fusion 360</span>
+                    <span class="tech-tag frontend">Soldering</span>
+                  </div>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -359,7 +365,6 @@
                     bit rough but end result looked good.
                   </p>
                 </div>
-                <button class="toggle-details">See More</button>
                 <div class="github-link">
                   <a
                     href="https://github.com/KenC2006/Infinity-Cube"
@@ -401,7 +406,11 @@
                 <div class="project-header">
                   <h3>Super Smash Blocks</h3>
                   <span class="timeframe">June 2023 - July 2023</span>
-                  <p class="project-tech">Java Swing, JavaFX</p>
+                  <div class="project-tech">
+                    <span class="tech-tag language">Java Swing</span>
+                    <span class="tech-tag frontend">JavaFX</span>
+                    <span class="tech-tag frontend">GameDev</span>
+                  </div>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -419,7 +428,6 @@
                     <i> Nintendo don't sue please </i>
                   </p>
                 </div>
-                <button class="toggle-details">See More</button>
                 <div class="github-link">
                   <a
                     href="https://github.com/KenC2006/SuperSmashBlocks"
@@ -460,9 +468,12 @@
                 <div class="project-header">
                   <h3>RC Car</h3>
                   <span class="timeframe">Apr 2022 - Mar 2022</span>
-                  <p class="project-tech">
-                    Arduino, C++, Bluetooth, AppDev, Soldering
-                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag frontend">Arduino</span>
+                    <span class="tech-tag frontend">C++</span>
+                    <span class="tech-tag frontend">AppDev</span>
+                    <span class="tech-tag frontend">Soldering</span>
+                  </div>
                 </div>
                 <div class="project-preview">
                   <p>
@@ -484,7 +495,6 @@
                     document breakdown, visit the GitHub.
                   </p>
                 </div>
-                <button class="toggle-details">See More</button>
                 <div class="github-link">
                   <a
                     href="https://github.com/KenC2006/RC_car"
@@ -538,7 +548,6 @@
               <div class="experience-details">
                 <p>More info coming soon.</p>
               </div>
-              <button class="toggle-details">See More</button>
             </div>
 
             <div class="experience-card">
@@ -579,13 +588,11 @@
                   <li>Problem creation in LATEX</li>
                 </ul>
               </div>
-              <button class="toggle-details">See More</button>
             </div>
           </div>
         </section>
       </main>
     </div>
-
     <script>
       //script to make the project and experience cards load more stuff
       function showTab(tabName) {
@@ -600,34 +607,55 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        const toggleButtons = document.querySelectorAll(".toggle-details");
-        toggleButtons.forEach((button) => {
-          button.addEventListener("click", function (e) {
-            e.stopPropagation();
-            const card = this.closest(".project-card, .experience-card");
-            const details = card.querySelector(
-              ".project-details, .experience-details"
-            );
-            details.classList.toggle("expanded");
-            this.textContent = details.classList.contains("expanded")
-              ? "See Less"
-              : "See More";
-          });
-        });
         const cards = document.querySelectorAll(
           ".project-card, .experience-card"
         );
         cards.forEach((card) => {
           card.addEventListener("click", function (e) {
             if (
-              e.target.tagName !== "BUTTON" &&
               e.target.tagName !== "A" &&
               !e.target.closest(".project-image-container") &&
-              !e.target.closest(".company-logo")
+              !e.target.closest(".company-logo") &&
+              !e.target.closest(".github-link")
             ) {
-              const button = this.querySelector(".toggle-details");
-              button.click();
+              const details = this.querySelector(
+                ".project-details, .experience-details"
+              );
+              details.classList.toggle("expanded");
             }
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        if (!document.querySelector(".tab-btn.active")) {
+          tabs[0].classList.add("active");
+          const firstContentId = tabs[0].getAttribute("data-target");
+          const firstContent = document.getElementById(firstContentId);
+          if (firstContent) firstContent.classList.add("active");
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            const targetId = this.getAttribute("data-target");
+
+            if (!targetId) return;
+
+            const targetContent = document.getElementById(targetId);
+            if (!targetContent) return;
+
+            tabs.forEach((t) => t.classList.remove("active"));
+
+            this.classList.add("active");
+
+            contents.forEach((content) => {
+              content.classList.remove("active");
+            });
+
+            targetContent.classList.add("active");
           });
         });
       });

@@ -245,6 +245,79 @@ header p {
   border-radius: 15px;
 }
 
+/* Project tags */
+.project-tech {
+  margin: 10px 0;
+  font-weight: 500;
+  clear: both;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: #444;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* .tech-tag.language {
+  background: #6b46c1;
+}
+
+.tech-tag.frontend {
+  background: #2c5282;
+}
+
+.tech-tag.backend {
+  background: #38a169;
+}
+
+.tech-tag.library {
+  background: #b83280;
+}
+
+.tech-tag.devops {
+  background: #c05621;
+}
+
+.tech-tag.ai {
+  background: #805ad5;
+}
+
+.tech-tag.mobile {
+  background: #dd6b20;
+}
+
+.tech-tag.tool {
+  background: #4a5568;
+} */
+
+@media (max-width: 600px) {
+  .tech-tag {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-tech {
+    justify-content: center;
+  }
+}
+
 /* Project Card Styles */
 .project-card {
   background: #1e1e1e;
@@ -273,7 +346,9 @@ header p {
 }
 
 .project-header h3 {
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
+  font-size: 22px;
+
   display: inline-block;
 }
 
@@ -413,21 +488,80 @@ header p {
   padding-left: 20px;
 }
 
-/* Toggle button */
-.toggle-details {
-  background: #333;
-  border: none;
-  color: white;
-  padding: 8px 15px;
-  margin-top: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
+/*Website load in animations*/
+.container {
+  opacity: 0;
+  animation: fadeInLoad 0.8s ease-in-out forwards;
 }
 
-.toggle-details:hover {
-  background: #444;
+@keyframes fadeInLoad {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.personal-info {
+  opacity: 0;
+  animation: fadeInLoad 0.6s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+.tabs {
+  opacity: 0;
+  animation: fadeInLoad 0.6s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.content {
+  opacity: 0;
+  animation: fadeInLoad 0.6s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* Project and experience animations */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInTab 0.5s ease forwards;
+}
+
+@keyframes fadeInTab {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 /* Media queries for responsiveness */
@@ -579,12 +713,6 @@ header p {
 
   .company-logo {
     margin-bottom: 10px;
-  }
-
-  .toggle-details {
-    display: block;
-    width: 100%;
-    padding: 10px;
   }
 
   .github-btn {
