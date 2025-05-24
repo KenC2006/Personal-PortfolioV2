@@ -366,7 +366,7 @@
               </div>
               <div class="project-content">
                 <div class="project-header">
-                  <h3>Super Smash Blocks</h3>
+                  <h3>Smash Blocks</h3>
                   <span class="timeframe">June 2023 - July 2023</span>
                 </div>
                 <div class="project-tech">
@@ -551,21 +551,17 @@
       </section>
     </div>
     <script>
-      //script to make the project and experience cards load more stuff
       function showTab(tabName) {
-        // Hide all tab sections with fade out
         const allTabs = document.querySelectorAll("#projects, #experiences");
         allTabs.forEach((tab) => {
           tab.classList.remove("active");
           tab.style.display = "none";
         });
 
-        // Remove active class from all buttons
         document
           .querySelectorAll(".tab-btn")
           .forEach((btn) => btn.classList.remove("active"));
 
-        // Show the selected tab with fade in
         setTimeout(() => {
           const selectedTab = document.getElementById(tabName);
           selectedTab.style.display = "grid";
@@ -574,22 +570,19 @@
           }, 10);
         }, 50);
 
-        // Activate the button
         event.currentTarget.classList.add("active");
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        // Set initial state
         document.getElementById("projects").style.display = "grid";
         document.getElementById("projects").classList.add("active");
 
-        // Card click functionality - now opens popup
         const cards = document.querySelectorAll(
           ".project-card, .experience-card"
         );
         cards.forEach((card) => {
+          // fix stupid link problem later
           card.addEventListener("click", function (e) {
-            // Don't open modal if clicking on links
             if (e.target.tagName === "A" || e.target.closest("a")) {
               return;
             }
