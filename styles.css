@@ -711,29 +711,53 @@ header::before {
     gap: var(--spacing-md);
   }
 
+  .personal-info {
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+
+  header {
+    height: auto;
+    min-height: 120px;
+  }
+
   .header-content {
+    position: relative;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: var(--spacing-sm);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: var(--spacing-md) 0;
+    width: 100%;
+    transform: none;
+    top: 0;
   }
 
   .header-content h1 {
     font-size: 2.2rem;
     margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .title-location {
+    align-items: center;
+    text-align: center;
   }
 
   .title-location p {
     font-size: 1rem;
+    text-align: center;
   }
 
   .header-contact {
-    justify-content: flex-start;
+    justify-content: center;
     padding: var(--spacing-xs);
+    width: 100%;
   }
 
   .header-contact-link {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 
   .bio-container {
@@ -793,12 +817,20 @@ header::before {
 
   .header-contact {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
   .header-contact-link {
-    padding: 6px 10px;
+    padding: 4px 10px;
     font-size: 0.8rem;
+    flex: 0 1 auto;
+    min-width: auto;
+  }
+
+  .header-contact-link svg {
+    width: 14px;
+    height: 14px;
   }
 
   .tab-buttons {
