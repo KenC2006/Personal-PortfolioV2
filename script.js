@@ -217,13 +217,12 @@ const projects = [
     technologies: [
       { type: "language", name: "Python" },
       { type: "framework", name: "Tensorflow" },
-      { type: "framework", name: "Pygame" },
       { type: "library", name: "NumPy" },
       { type: "library", name: "Tf-Agents" },
     ],
     preview: "AI that plays the Pummel Party spooky spikes minigame",
     details: [
-      "Kept getting last place in the spooky spikes minigame from Pummel Party so I built a similar 3D environment in pygame to train an AI to make up for it. Tensorflow and Keras was used to simplify the reinforcement learning process. The AI learns through a deep-Q-network that checks player state, upcoming obstacles, and timing to determine jump and duck intervals. Current training material is set at 100,00 random experiences and 20,000 learning steps",
+      "Kept getting last place in the spooky spikes minigame from Pummel Party so I built a similar 3D environment with pygame to train an AI to play it for me. Tensorflow and Keras was used to simplify the reinforcement learning process. The AI learns through a deep-Q-network that checks player state, upcoming obstacles, and timing to determine jump and duck intervals. Current training material is set at 100,000 random experiences and 20,000 learning steps",
       "<i>Initally only wanted to test projecting 2D shapes to 3D using trig and depth sorting~</i>",
     ],
     githubUrl: "https://github.com/KenC2006/spooky-spikes-RL",
