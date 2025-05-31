@@ -1,4 +1,12 @@
-# Personal portfolio website
+# Spooky Spikes AI
 
-Not exactly the greatest with design and front-end stuff but turned out ok :)
+### Dependencies
 
+Environment is run on python 3.10, configuration is
+
+- Tensorflow 2.14.0
+- tf-agents 0.18.0
+- pygame 2.1.3
+- numpy 1.24.3
+
+_Exact versions have to be used, Kerias should be installed with tf_

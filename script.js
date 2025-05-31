@@ -1,13 +1,30 @@
 // Project card generator function
 function createProjectCard(project) {
-  return `
-    <div class="project-card">
-      <div class="project-image-container">
+  const imageHtml = project.gifImage
+    ? `
+        <img
+          src="${project.staticImage}"
+          alt="${project.title}"
+          class="project-img static"
+        />
+        <img
+          src="${project.gifImage}"
+          alt="${project.title} animation"
+          class="project-img gif"
+        />
+    `
+    : `
         <img
           src="${project.imagePath}"
           alt="${project.title}"
           class="project-img"
         />
+    `;
+
+  return `
+    <div class="project-card">
+      <div class="project-image-container">
+        ${imageHtml}
       </div>
       <div class="project-content">
         <div class="project-header">
@@ -183,9 +200,34 @@ function initializeCardClickHandlers() {
     });
   });
 }
+// Tech tag types:
+// - language
+// - framework
+// - library
+// - tool
+// - hardware
 
 // Initialize projects and experiences data
 const projects = [
+  {
+    staticImage: "res/spookySpikes.png",
+    gifImage: "res/spooky_spikesGIF.gif",
+    title: "Spooky Spikes AI",
+    timeframe: "May 2025 - June 2025",
+    technologies: [
+      { type: "language", name: "Python" },
+      { type: "framework", name: "Tensorflow" },
+      { type: "framework", name: "Pygame" },
+      { type: "library", name: "NumPy" },
+      { type: "library", name: "Tf-Agents" },
+    ],
+    preview: "AI that plays the Pummel Party spooky spikes minigame",
+    details: [
+      "Kept getting last place in the spooky spikes minigame from Pummel Party so I built a similar 3D environment in pygame to train an AI to make up for it. Tensorflow and Keras was used to simplify the reinforcement learning process. The AI learns through a deep-Q-network that checks player state, upcoming obstacles, and timing to determine jump and duck intervals. Current training material is set at 100,00 random experiences and 20,000 learning steps",
+      "<i>Initally only wanted to test projecting 2D shapes to 3D using trig and depth sorting~</i>",
+    ],
+    githubUrl: "https://github.com/KenC2006/spooky-spikes-RL",
+  },
   {
     imagePath: "res/instaLogo.jpg",
     title: "InScraper",
@@ -200,7 +242,7 @@ const projects = [
       "Instagram webscraper that finds discrepancies between followers and following.",
     details: [
       "Got bored during winter break so I made something to solve crippling insecurity. The program uses a proxy browser to manually find, collect, and scroll follow data with a script before comparing the two lists for discrepancies.",
-      "<i>Definitely easier to just use Instagam's API but I wanted to try out Selenium~.</i>",
+      "<i>Definitely easier to just use Instagam's API but I wanted to try out Selenium~</i>",
     ],
     githubUrl: "https://github.com/KenC2006/InScraper",
   },
@@ -216,7 +258,7 @@ const projects = [
     preview:
       "2D rogue-like that implements random map generation reactive hitboxes.",
     details: [
-      "10000+ lines of code and 30+ classes. Maps and asserts were drawn by a friend and game inspiration was taken from DeadCells and Hollow Knight. To see controls and additional details on a ton of game features, check out the GitHub.",
+      "10,000+ lines of code and 30+ classes. Maps and asserts were drawn by a friend and game inspiration was taken from DeadCells and Hollow Knight. To see controls and additional details on a ton of game features, check out the GitHub.",
     ],
     githubUrl: "https://github.com/KenC2006/DeadKnight",
   },
