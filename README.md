@@ -9,4 +9,4 @@ Environment is run on python 3.10, configuration is
 - pygame 2.1.3
 - numpy 1.24.3
 
-_Exact versions have to be used, Kerias should be installed with tf_
+_Exact versions have to be used, Keras should be installed with tf_

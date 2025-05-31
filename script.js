@@ -217,7 +217,7 @@ const projects = [
     technologies: [
       { type: "language", name: "Python" },
       { type: "framework", name: "Tensorflow" },
-      { type: "library", name: "NumPy" },
+      { type: "library", name: "Keras" },
       { type: "library", name: "Tf-Agents" },
     ],
     preview: "AI that plays the Pummel Party spooky spikes minigame",
