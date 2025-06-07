@@ -209,23 +209,23 @@ function initializeCardClickHandlers() {
 
 // Initialize projects and experiences data
 const projects = [
-  {
-    imagePath: "res/stocker.png",
-    title: "Stocker",
-    timeframe: "Jan 2025 - Present",
-    technologies: [
-      { type: "framework", name: "React" },
-      { type: "framework", name: "Node.js" },
-      { type: "tool", name: "Firebase" },
-      { type: "tool", name: "Cloud" },
-    ],
-    preview:
-      "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color: #50c878; text-decoration: underline;'>UofT students</a>",
-    details: [
-      "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
-    ],
-    githubUrl: "https://github.com/KenC2006/stocker",
-  },
+  // {
+  //   imagePath: "res/stocker.png",
+  //   title: "Stocker",
+  //   timeframe: "Jan 2025 - Present",
+  //   technologies: [
+  //     { type: "framework", name: "React" },
+  //     { type: "framework", name: "Node.js" },
+  //     { type: "tool", name: "Firebase" },
+  //     { type: "tool", name: "Cloud" },
+  //   ],
+  //   preview:
+  //     "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color: #50c878; text-decoration: underline;'>UofT students</a>",
+  //   details: [
+  //     "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
+  //   ],
+  //   githubUrl: "https://github.com/KenC2006/stocker",
+  // },
   {
     staticImage: "res/spookySpikes.png",
     gifImage: "res/spooky_spikesGIF.gif",
