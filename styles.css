@@ -643,13 +643,20 @@ header::before {
 @media (max-width: 768px) {
   #projects.active,
   #experiences.active {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: var(--spacing-md);
   }
 
-  .project-card {
-    height: auto;
-    min-height: 160px;
+  .project-card,
+  .experience-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .header-contact {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
   }
 
   .project-image-container {
@@ -667,7 +674,6 @@ header::before {
 
   .project-preview p {
     font-size: 0.85rem;
-    -webkit-line-clamp: 3;
   }
 
   .tech-tag {
@@ -763,7 +769,21 @@ header::before {
 
   .experience-preview {
     font-size: 0.85rem;
-    -webkit-line-clamp: 3;
+  }
+
+  .header-contact {
+    gap: 8px;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .header-contact-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  #projects.active,
+  #experiences.active {
+    gap: var(--spacing-sm);
   }
 }
 
@@ -919,6 +939,7 @@ header::before {
 #experiences.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
   animation: none;
   opacity: 1;
 }
@@ -1111,7 +1132,6 @@ header::before {
 
   .project-preview p {
     font-size: 0.85rem;
-    -webkit-line-clamp: 3;
   }
 
   .tech-tag {
@@ -1199,7 +1219,7 @@ header::before {
   .project-image-container {
     width: 100%;
     height: 180px;
-    order: -1; /* Move image to top */
+    order: -1;
   }
 
   .project-content {
@@ -1233,7 +1253,6 @@ header::before {
 
   .experience-preview {
     font-size: 0.85rem;
-    -webkit-line-clamp: 3;
   }
 }
 
