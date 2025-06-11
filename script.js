@@ -61,7 +61,6 @@ function createExperienceCard(experience, index) {
   `;
 }
 
-// Add new project/experience functions with simple fade
 function addNewProject(project) {
   const projectGrid = document.querySelector("#projects");
   const projectCard = createProjectCard(project);
@@ -74,7 +73,6 @@ function addNewExperience(experience) {
   experienceGrid.insertAdjacentHTML("beforeend", experienceCard);
 }
 
-// Tab switching function with smooth transitions
 function showTab(tabName) {
   document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.classList.remove("active");
@@ -102,17 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
     experiencesContainer.innerHTML += createExperienceCard(experience, index);
   });
 
-  // Show projects tab by default
   showTab("projects");
 
-  // Close modal when clicking outside
   document.getElementById("modal").addEventListener("click", (e) => {
     if (e.target.classList.contains("modal-overlay")) {
       closeModal();
     }
   });
 
-  // Close modal on escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeModal();
@@ -158,7 +153,17 @@ function openModal(type, data) {
           .join("")}
       </div>
       <div class="modal-content-section">
-        ${data.details.map((detail) => `<p>${detail}</p>`).join("")}
+        ${data.details
+          .map((detail) => {
+            const formattedDetail = detail
+              .split("\n\n")
+              .map((paragraph) => {
+                return paragraph.replace(/\*(.*?)\*/g, "<em>$1</em>");
+              })
+              .join("</p><p>");
+            return `<p>${formattedDetail}</p>`;
+          })
+          .join("")}
       </div>
       ${
         data.github
@@ -209,9 +214,10 @@ const projects = [
   {
     title: "Spooky Spikes AI",
     timeframe: "May 2025 - June 2025",
-    preview: "AI that plays the Pummel Party spooky spikes minigame",
+    preview:
+      "Reinforcement learning AI that jumps and ducks under 3D moving bars accurately.",
     details: [
-      "Kept getting last place in the spooky spikes minigame from Pummel Party so I built a similar 3D environment with pygame to train an AI to play it for me. Tensorflow and Keras was used to simplify the reinforcement learning process. The AI learns through a deep-Q-network that checks player state, upcoming obstacles, and timing to determine jump/duck intervals. Training is set at 100,000 random experiences and 20,000 learning steps",
+      "*Inspired by the Spooky Spikes Minigame from Pummel Party*\n\nTensorFlow and Keras were used to streamline the implementation of the reinforcement learning pipeline. The AI is trained using a Deep Q-Network (DQN) that considers the player’s current state, the position of upcoming obstacles, and timing. The training process includes a replay buffer with 100,000 randomly sampled experiences, from which the model learns over 20,000 gradient update steps. The learning was stabilized through extensive tuning of hyperparameters, including epsilon decay rates, network architecture, and node density. Various configurations were tested to find the most stable and efficient setup for consistent learning performance.",
     ],
     image: "res/spookySpikes.png",
     gifImage: "res/spooky_spikesGIF.gif",
@@ -221,7 +227,7 @@ const projects = [
   {
     title: "InScraper",
     timeframe: "Dec 2025",
-    preview: "Instagram web scraper for follow analytics",
+    preview: "Instagram web scraper that searches for follow discrepancies",
     details: [
       "Web scraper that collects data from Instagram follow counts. Uses Selenium for browser data collection and Javascript for table extension/HTML unravelling.",
     ],
@@ -233,21 +239,21 @@ const projects = [
     title: "DeadKnight",
     timeframe: "Apr 2024 - June 2024",
     preview:
-      "2D rogue-like that implements random map generation reactive hitboxes.",
+      "2D roguevania with random map gen, reactive hitboxes and smart enemy AI.",
     details: [
-      "10,000+ lines of code and 30+ classes. Maps and asserts were drawn by a friend and game inspiration was taken from DeadCells and Hollow Knight. To see controls and additional details on a ton of game features, check out the GitHub.",
+      "DeadKnight features a combat system with both melee and ranged weapons, including swords, spears, and various projectile-based weapons. Players navigate through procedurally generated rooms across different biomes, facing increasingly challenging enemies and boss battles. The combat mechanics include a fluid movement system with jumping, dashing, and strategic weapon switching. A dungeon room generation system is used to create unique maps each playthrough, and enemies use an intelligent enemy AI (smart path finding and attack patterns) to keep the game interesting. Additional features include a dynamic camera system with minimap functionality, inventory system for weapon management, and a stats system that allows for character upgrades.",
     ],
     image: "res/DeadKnight.png",
     tech: ["Java", "Swing", "Game Dev"],
     github: "https://github.com/KenC2006/DeadKnight",
   },
   {
-    title: "Infinity Cube",
+    title: "Hyper Cube",
     timeframe: "June 2023 - July 2023",
     preview:
-      "Infinity cube made using an ESP32 board and two-way reflective mirrors.",
+      "Hyper cube built using an ESP32 board and two-way reflective mirrors.",
     details: [
-      "The cube frame is made from PLA black filament (maximum color contrast with LEDS) and the 3D print STL was designed in Fusion 360. Product video, STLs, and wiring schematics can be found on the Github.",
+      "Designed a 3D-printed cube with addressable LED strips and two-way mirrors to create a hypercube light illusion. Powered by an ESP32 running WLED, it supports dynamic effects, brightness control, and pattern switching. 3D print STL's, wiring diagrams, and more can be found on the GIthub.",
     ],
     image: "res/cube.png",
     tech: ["Arduino", "C++", "Fusion 360", "Soldering"],
@@ -256,9 +262,9 @@ const projects = [
   {
     title: "Smash Blocks",
     timeframe: "June 2023 - July 2023",
-    preview: "Super Smash Bros game with stun, damage, and combo mechanics.",
+    preview: "2 player fighter with knockback, damage, and combo mechanics.",
     details: [
-      "This project was made over the summer to kill some time. Its the first time I worked on a relatively large OOP project and was a ton of fun to develop.",
+      "Programmed in Java using Swing and AWT, Smash Blocks features two-player combat, multi-threaded dynammic movement, and fully customizable controls that allow players to re-map keybinds. The game implements platform collision detection, dynamic menus, animated UI, and knockback applification. Additionally, players can perform different attack types, and combo chain. Overall, it was designed with an event-driven architecture and object-oriented principles.",
     ],
     image: "res/smash.png",
     tech: ["Java", "Swing", "JavaFX", "Game Dev"],
@@ -269,7 +275,7 @@ const projects = [
     timeframe: "Apr 2022 - Mar 2022",
     preview: "Remote control car made with Arduino and bluetooth mobile app.",
     details: [
-      "Parts included wires, a 12V battery cartridge, 4 DC motors, a HC-05 chip (bluetooth receiver), Arduino UNO, and L298N motor driver chip. The wires from the DC motors on each side were grouped together and connected to the corresponding ports on the dual motor driver chip. For Bluetooth control, I developed an app using MIT App Inventor to simplify pairing and communication. The app sent specific text commands when buttons were pressed, which the Arduino interpreted to control the motors accordingly. For a full document breakdown, visit the GitHub.",
+      "Parts included wires, a 12V battery cartridge, 4 DC motors, a HC-05 chip (bluetooth receiver), Arduino UNO, and L298N motor driver chip. The wires from the DC motors on each side were grouped together and connected to the corresponding ports on the dual motor driver chip. For Bluetooth control, I developed an app using MIT App Inventor to simplify pairing and communication. The app sent text commands when buttons were pressed, which the Arduino interpreted to control the motors accordingly. For a full document breakdown, visit the GitHub.",
     ],
     image: "res/car.png",
     tech: ["Arduino", "C++", "App Dev", "Soldering"],
