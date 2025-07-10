@@ -217,7 +217,7 @@ const projects = [
     preview:
       "Reinforcement learning AI that jumps and ducks under 3D moving bars accurately.",
     details: [
-      "*Inspired by the Spooky Spikes Minigame from Pummel Party*\n\nTensorFlow and Keras were used to streamline the implementation of the reinforcement learning pipeline. The AI is trained using a Deep Q-Network (DQN) that considers the player’s current state, the position of upcoming obstacles, and timing. The training process includes a replay buffer with 100,000 randomly sampled experiences, from which the model learns over 20,000 gradient update steps. The learning was stabilized through extensive tuning of hyperparameters, including epsilon decay rates, network architecture, and node density. Various configurations were tested to find the most stable and efficient setup for consistent learning performance.",
+      "*Inspired by the Spooky Spikes Minigame from Pummel Party*\n\nUsing TensorFlow and Keras, I implementation a streamlined reinforcement learning pipeline. The AI is trained using a Deep Q-Network (DQN) that considers the player’s current state, the position of upcoming obstacles, and timing. The training process includes a replay buffer with 100,000 randomly sampled experiences, from which the model learns over 20,000 gradient update steps. The learning was stabilized through extensive tuning of hyperparameters, including epsilon decay rates, network architecture, and node density. Various configurations were tested to find the most stable and efficient setup for consistent learning performance.",
     ],
     image: "res/spookySpikes.png",
     gifImage: "res/spooky_spikesGIF.gif",
@@ -225,15 +225,16 @@ const projects = [
     github: "https://github.com/KenC2006/spooky-spikes-RL",
   },
   {
-    title: "InScraper",
-    timeframe: "Dec 2025",
-    preview: "Instagram web scraper that searches for follow discrepancies",
+    title: "ModelShift",
+    timeframe: "Dec 2024 - Mar 2025",
+    preview:
+      "AI comparison tool for multi-model prompting and reponse analysis.",
     details: [
-      "Web scraper that collects data from Instagram follow counts. Uses Selenium for browser data collection and Javascript for table extension/HTML unravelling.",
+      "ModelShift allows users to send the same prompt to multiple AI providers (ChatGPT, Gemini, Claude, etc) and view responses side-by-side in real-time. The application supports a React/Tailwind CSS frontend, dark-light theme styling, and responsive design. The backend is built with Node.js and Express, implementing secure API key management with encryption, rate limiting, and abuse detection. Users can customize system prompts, adjust model temperature and token limits, and export comparison results. The application includes Firebase integration for authentication and data storage, with features like API key usage statistics, multiple provider support, and markdown rendering for AI.",
     ],
-    image: "res/instaLogo.jpg",
-    tech: ["Python", "Javascript", "Selenium"],
-    github: "https://github.com/KenC2006/instagram-scraper",
+    image: "res/modelshift.png",
+    tech: ["React", "Node.js", "Crypto"],
+    github: "https://github.com/KenC2006/modelShift",
   },
   {
     title: "DeadKnight",
