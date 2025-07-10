@@ -1,4 +1,3 @@
-// Project card generator function
 function createProjectCard(project, index) {
   const imageHtml = project.gifImage
     ? `
@@ -34,7 +33,6 @@ function createProjectCard(project, index) {
   `;
 }
 
-// Experience card generator function
 function createExperienceCard(experience, index) {
   return `
     <div class="experience-card" onclick="openModal('experience', ${JSON.stringify(
@@ -87,7 +85,6 @@ function showTab(tabName) {
   document.getElementById(tabName).classList.add("active");
 }
 
-// Initialize the page
 document.addEventListener("DOMContentLoaded", () => {
   const projectsContainer = document.getElementById("projects");
   const experiencesContainer = document.getElementById("experiences");
@@ -115,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Initialize card effects
 function initializeCardEffects() {
   document.addEventListener("mousemove", (e) => {
     const cards = document.querySelectorAll(".project-card, .experience-card");
@@ -136,7 +132,6 @@ function initializeCardEffects() {
   });
 }
 
-// Modal functionality
 function openModal(type, data) {
   const modal = document.getElementById("modal");
   const modalBody = document.getElementById("modal-body");
@@ -209,8 +204,20 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-// Initialize projects and experiences data
 const projects = [
+  // {
+  //   image: "res/stocker.png",
+  //   title: "Stocker",
+  //   timeframe: "Jan 2025 - Present",
+  //   tech: ["React", "Node.js", "Firebase", "Cloud"],
+  //   preview:
+  //     "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color: #50c878; text-decoration: underline;'>UofT students</a>",
+  //   details: [
+  //     "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
+  //   ],
+  //   github: "https://github.com/KenC2006/stocker",
+  // },
+
   {
     title: "Spooky Spikes AI",
     timeframe: "May 2025 - June 2025",
