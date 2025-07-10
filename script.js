@@ -204,6 +204,17 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = "res/KenChen_Resume.pdf";
+  link.download = "KenChen_Resume.pdf";
+  link.target = "_blank";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 const projects = [
   // {
   //   image: "res/stocker.png",

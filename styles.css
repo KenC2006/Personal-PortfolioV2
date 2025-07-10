@@ -114,18 +114,41 @@ header::before {
   gap: 6px;
   padding: 6px 14px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.25);
   color: var(--color-text);
   transition: all var(--transition-speed) ease;
   text-decoration: none;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 0.85rem;
   font-weight: 600;
+  opacity: 1;
+}
+
+.header-contact-link:link,
+.header-contact-link:visited,
+.header-contact-link:active {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-text);
+  text-decoration: none;
+  opacity: 1;
 }
 
 .header-contact-link:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.download-resume {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.download-resume:hover {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
   transform: translateY(-2px);
   box-shadow: var(--box-shadow);
 }
@@ -773,6 +796,9 @@ header::before {
   .header-contact-link {
     padding: 6px 12px;
     font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   #projects.active,
@@ -814,6 +840,9 @@ header::before {
   .header-contact-link {
     padding: 4px 8px;
     font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .header-contact-link svg {
@@ -1058,6 +1087,9 @@ header::before {
   .header-contact-link {
     padding: 5px 12px;
     font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .header-content {
@@ -1155,6 +1187,9 @@ header::before {
   .header-contact-link {
     padding: 4px 10px;
     font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .header-contact-link svg {
