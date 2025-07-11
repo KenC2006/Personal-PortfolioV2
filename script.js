@@ -207,7 +207,6 @@ function closeModal() {
 function downloadResume() {
   const link = document.createElement("a");
   link.href = "res/KenChen_Resume.pdf";
-  link.download = "KenChen_Resume.pdf";
   link.target = "_blank";
 
   document.body.appendChild(link);
@@ -216,18 +215,18 @@ function downloadResume() {
 }
 
 const projects = [
-  // {
-  //   image: "res/stocker.png",
-  //   title: "Stocker",
-  //   timeframe: "Jan 2025 - Present",
-  //   tech: ["React", "Node.js", "Firebase", "Cloud"],
-  //   preview:
-  //     "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color: #50c878; text-decoration: underline;'>UofT students</a>",
-  //   details: [
-  //     "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
-  //   ],
-  //   github: "https://github.com/KenC2006/stocker",
-  // },
+  {
+    image: "res/stocker.png",
+    title: "Stocker",
+    timeframe: "Jan 2025 - Present",
+    tech: ["React", "Node.js", "Firebase", "Cloud"],
+    preview:
+      "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>UofT students</a>",
+    details: [
+      "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
+    ],
+    github: "https://github.com/KenC2006/stocker",
+  },
 
   {
     title: "Spooky Spikes AI",
