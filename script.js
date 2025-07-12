@@ -221,7 +221,7 @@ const projects = [
     timeframe: "Jan 2025 - Present",
     tech: ["React", "Node.js", "Firebase", "Cloud"],
     preview:
-      "Real-time stock trading simulator with leaderboard for <a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>UofT students</a>",
+      "<a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>Real-time stock trading simulator</a> with dynamic leaderboard for UofT students",
     details: [
       "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
     ],
@@ -245,7 +245,7 @@ const projects = [
     title: "ModelShift",
     timeframe: "Dec 2024 - Mar 2025",
     preview:
-      "AI comparison tool for multi-model prompting and reponse analysis.",
+      "<a href='https://modelshift-bbcd8.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>AI comparison tool</a> for multi-model prompting and reponse analysis.",
     details: [
       "ModelShift allows users to send the same prompt to multiple AI providers (ChatGPT, Gemini, Claude, etc) and view responses side-by-side in real-time. The application supports a React/Tailwind CSS frontend, dark-light theme styling, and responsive design. The backend is built with Node.js and Express, implementing secure API key management with encryption, rate limiting, and abuse detection. Users can customize system prompts, adjust model temperature and token limits, and export comparison results. The application includes Firebase integration for authentication and data storage, with features like API key usage statistics, multiple provider support, and markdown rendering for AI.",
     ],
