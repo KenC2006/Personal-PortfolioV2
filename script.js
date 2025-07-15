@@ -223,7 +223,7 @@ const projects = [
     preview:
       "<a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>Real-time stock trading simulator</a> with dynamic leaderboard for UofT students",
     details: [
-      "Stocker is a responsive web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts and backend data to firebase. The front end is created with React while backend scripting was done with node.js.",
+      "Stocker is a full stack web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts for leaderboard updates, with backend data passed to Firebase. For the front end, I used React with Charka UI, while backend scripting was done with Node.js.",
     ],
     github: "https://github.com/KenC2006/stocker",
   },
