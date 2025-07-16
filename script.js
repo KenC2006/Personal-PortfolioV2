@@ -218,12 +218,12 @@ const projects = [
   {
     image: "res/stocker.png",
     title: "Stocker",
-    timeframe: "Jan 2025 - Present",
+    timeframe: "Jun 2025 - Present",
     tech: ["React", "Node.js", "Firebase", "Cloud"],
     preview:
       "<a href='https://stockerstorage.web.app/' target='_blank' rel='noopener noreferrer' style='color:rgb(44, 157, 202); text-decoration: underline;'>Real-time stock trading simulator</a> with dynamic leaderboard for UofT students",
     details: [
-      "Stocker is a full stack web application that allows users to track and simulate stock portfolios in real-time with a profit leaderboard to compete against friends. Stocker uses the Finnhub API to pull stock data and deploys cloud scripts for leaderboard updates, with backend data passed to Firebase. For the front end, I used React with Charka UI, while backend scripting was done with Node.js.",
+      "Stocker is a full stack stock trading simulator. It features real-time trading, monthly contests, and a profit leaderboard to compete against friends. It uses the Finnhub API to pull stock data and deploys cloud scripts for leaderboard updates, with backend data passed to Firebase. For the frontend, I used React with Charka UI, while backend scripting was done with Node.js.",
     ],
     github: "https://github.com/KenC2006/stocker",
   },
@@ -234,7 +234,7 @@ const projects = [
     preview:
       "Reinforcement learning AI that jumps and ducks under 3D moving bars accurately.",
     details: [
-      "*Inspired by the Spooky Spikes Minigame from Pummel Party*\n\nUsing TensorFlow and Keras, I implementation a streamlined reinforcement learning pipeline. The AI is trained using a Deep Q-Network (DQN) that considers the player’s current state, the position of upcoming obstacles, and timing. The training process includes a replay buffer with 100,000 randomly sampled experiences, from which the model learns over 20,000 gradient update steps. The learning was stabilized through extensive tuning of hyperparameters, including epsilon decay rates, network architecture, and node density. Various configurations were tested to find the most stable and efficient setup for consistent learning performance.",
+      "*Inspired by the Spooky Spikes Minigame from Pummel Party*\n\nUsing TensorFlow and Keras, I implemented a streamlined reinforcement learning pipeline. The AI is trained using a Deep Q-Network (DQN) that considers the player’s current state, the position of upcoming obstacles, and timing. The training process includes a replay buffer with 100,000 randomly sampled experiences, from which the model learns over 20,000 gradient update steps. The learning was stabilized through extensive tuning of hyperparameters, including epsilon decay rates, network architecture, and node density. Various configurations were tested to find the most stable and efficient setup for consistent learning performance.",
     ],
     image: "res/spookySpikes.png",
     gifImage: "res/spooky_spikesGIF.gif",
