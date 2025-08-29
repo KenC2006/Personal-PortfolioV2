@@ -308,7 +308,7 @@ const experiences = [
     timeframe: "May 2025 - Aug 2025",
     companyName: "TD Bank",
     preview: "Backend engineer for TD Securities",
-    details: ["Handled asset database, API, and infrastucture upgrades"],
+    details: ["Asset database, API, and infrastucture development"],
   },
   {
     logoPath: "res/OJ.png",
