@@ -307,8 +307,8 @@ const experiences = [
     title: "Software Engineering Intern",
     timeframe: "May 2025 - Aug 2025",
     companyName: "TD Bank",
-    preview: "Working on applying AI to cloud security",
-    details: ["More info coming soon."],
+    preview: "Backend engineer for TD Securities",
+    details: ["Handled asset database, API, and infrastucture upgrades"],
   },
   {
     logoPath: "res/OJ.png",
@@ -317,9 +317,6 @@ const experiences = [
     companyName: "Thornhill Secondary School",
     preview:
       "Developer for the Competitve coding site TSSOJ.ca with over 800 registered users.",
-    details: [
-      "Modelled off the open source site DMOJ.ca, TSSOJ.ca is an online judge for competitive programming. It hosts various contests with participants from over 3 schools monthly and is used to teach the computer science courses at Thornhill Secondary School. The site allows 30+ programming languages to be submitted and evaluated code using docker scripts. User data and profiles are stores in a mySQL database while problem creation is done using a Latex supported editor.",
-      "As a developer, I created various coding problems testing knowledge on essential algorithms. I also maintained the backend, ensuring Django compatibility, the removal of deprecated API code, and upgraded dependencies.",
-    ],
+    details: ["Database and infrastucture stuff"],
   },
 ];
