@@ -12,7 +12,6 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },
   async headers() {
@@ -48,5 +47,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-
