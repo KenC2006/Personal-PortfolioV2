@@ -169,8 +169,8 @@ export default function Modal({ isOpen, onClose, data }: ModalProps) {
               <X size={20} />
             </button>
             {data.type === "project"
-              ? renderProjectModal(data.data)
-              : renderExperienceModal(data.data)}
+              ? renderProjectModal(data.data as Project)
+              : renderExperienceModal(data.data as Experience)}
           </div>
         </motion.div>
       )}
