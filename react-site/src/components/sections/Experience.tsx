@@ -19,7 +19,7 @@ export default function ExperienceSection() {
               <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
                 Experience
               </h2>
-              <p className="text-lg text-gray-400 pb-1">Companies and organizations I've worked for</p>
+              <p className="text-lg text-gray-400 pb-1">Companies and organizations I&apos;ve worked for</p>
               {/* Bottle overlay */}
               <div className="absolute -top-6 -right-8 lg:-top-8 lg:-right-10 rotate-12">
                 <Image

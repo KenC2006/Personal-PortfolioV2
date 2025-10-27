@@ -3,9 +3,8 @@
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Github, ExternalLink } from "lucide-react";
-import { ModalData } from "@/types";
-import TechTag from "./TechTag";
-import Button from "./Button";
+import Image from "next/image";
+import { ModalData, Project, Experience } from "@/types";
 
 interface ModalProps {
   isOpen: boolean;
@@ -42,7 +41,7 @@ export default function Modal({ isOpen, onClose, data }: ModalProps) {
 
   if (!data) return null;
 
-  const renderProjectModal = (project: any) => (
+  const renderProjectModal = (project: Project) => (
     <>
       <div className="mb-4">
         <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">
@@ -70,7 +69,7 @@ export default function Modal({ isOpen, onClose, data }: ModalProps) {
         {project.details.map((detail: string, index: number) => {
           const formattedDetail = detail
             .split("\n\n")
-            .map((paragraph, pIndex) => {
+            .map((paragraph) => {
               return paragraph.replace(/\*(.*?)\*/g, "<em class='text-gray-300 italic'>$1</em>");
             })
             .join("</p><p class='text-white'>");
@@ -115,13 +114,15 @@ export default function Modal({ isOpen, onClose, data }: ModalProps) {
     </>
   );
 
-  const renderExperienceModal = (experience: any) => (
+  const renderExperienceModal = (experience: Experience) => (
     <>
       <div className="flex items-center gap-5 mb-8">
         <div className="w-16 h-16 rounded-xl overflow-hidden border-2 border-white/20 shadow-lg">
-          <img
+          <Image
             src={experience.logoPath}
             alt={experience.companyName}
+            width={64}
+            height={64}
             className="w-full h-full object-cover"
           />
         </div>
