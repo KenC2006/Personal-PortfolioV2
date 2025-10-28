@@ -7,7 +7,7 @@ import { experiences } from "@/data/experiences";
 export default function ExperienceSection() {
   return (
     <>
-      <section className="py-24 pb-96">
+      <section className="py-24">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

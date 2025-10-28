@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import ErrorBoundary from "@/components/ui/ErrorBoundary";
 import PixelBlastBackground from "@/components/ui/PixelBlastBackground";
 import Navigation from "@/components/layout/Navigation";
+import ImagePreloader from "@/components/ui/ImagePreloader";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -70,11 +71,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={raleway.variable}>
       <body className="font-raleway text-white min-h-screen bg-black">
-        <PixelBlastBackground />
-        <div className="relative" style={{ zIndex: 10 }}>
-          <Navigation />
-          <ErrorBoundary>{children}</ErrorBoundary>
-        </div>
+        <ImagePreloader>
+          <PixelBlastBackground />
+          <div className="relative" style={{ zIndex: 10 }}>
+            <Navigation />
+            <ErrorBoundary>{children}</ErrorBoundary>
+          </div>
+        </ImagePreloader>
       </body>
     </html>
   );
