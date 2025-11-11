@@ -24,7 +24,7 @@ export default function Introduction() {
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
+                transition={{ duration: 0.4 }}
               >
                 <h1 className="text-5xl lg:text-7xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent leading-tight">
                   {personalInfo.name}
@@ -34,7 +34,7 @@ export default function Introduction() {
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.15 }}
+                transition={{ duration: 0.4 }}
                 className="text-2xl lg:text-3xl"
               >
                 <span className="text-gray-300">{personalInfo.title} </span>
@@ -44,7 +44,7 @@ export default function Introduction() {
               <motion.p
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
+                transition={{ duration: 0.4 }}
                 className="text-lg text-gray-200 leading-relaxed"
               >
                 {personalInfo.description}
@@ -53,7 +53,7 @@ export default function Introduction() {
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.25 }}
+                transition={{ duration: 0.4 }}
                 className="flex items-center gap-2 text-gray-400"
               >
                 <svg
@@ -76,7 +76,7 @@ export default function Introduction() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
+                transition={{ duration: 0.4 }}
                 className="flex gap-4 flex-wrap pt-4"
               >
                 <Link href="/projects">
@@ -95,7 +95,7 @@ export default function Introduction() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.4 }}
               className="flex justify-center items-center"
             >
               <div className="relative">

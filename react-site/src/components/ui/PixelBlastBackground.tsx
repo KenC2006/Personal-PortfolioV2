@@ -23,14 +23,14 @@ export default function PixelBlastBackground() {
     >
       <PixelBlast
         variant="circle"
-        pixelSize={6}
+        pixelSize={10}
         color="#22D3EE"
         className=""
         style={{}}
         patternScale={3}
         patternDensity={1.2}
         pixelSizeJitter={0.5}
-        enableRipples
+        enableRipples={false}
         rippleSpeed={0.4}
         rippleThickness={0.12}
         rippleIntensityScale={1.5}

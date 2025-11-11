@@ -44,7 +44,7 @@ export default function ExperienceSection() {
                   key={experience.id}
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.08 }}
+                  transition={{ duration: 0.3 }}
                   className="relative flex items-start gap-6 lg:gap-10 group"
                 >
                   {/* Timeline dot */}
