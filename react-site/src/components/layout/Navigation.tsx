@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks, contactLinks } from "@/data/constants";
+import { memo, useCallback } from "react";
 
 const iconMap = {
   github: Github,
@@ -13,17 +14,17 @@ const iconMap = {
   download: Download,
 };
 
-export default function Navigation() {
+function Navigation() {
   const pathname = usePathname();
 
-  const handleResumeDownload = () => {
+  const handleResumeDownload = useCallback(() => {
     const link = document.createElement("a");
     link.href = "/res/KenChen_Resume.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, []);
 
   return (
     <motion.nav
@@ -82,3 +83,7 @@ export default function Navigation() {
     </motion.nav>
   );
 }
+
+// Memoize Navigation, but it will still re-render when pathname changes
+// This is expected and desired for active link highlighting
+export default memo(Navigation);

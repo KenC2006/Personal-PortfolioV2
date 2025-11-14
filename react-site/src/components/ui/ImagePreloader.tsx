@@ -3,6 +3,7 @@
 import { useImagePreloader } from '@/hooks/useImagePreloader';
 import { projects } from '@/data/projects';
 import { experiences } from '@/data/experiences';
+import { memo, useMemo } from 'react';
 
 const getAllImagePaths = (): string[] => {
   const paths: string[] = [];
@@ -20,9 +21,13 @@ const getAllImagePaths = (): string[] => {
   return paths;
 };
 
-export default function ImagePreloader({ children }: { children: React.ReactNode }) {
-  const imagePaths = getAllImagePaths();
+function ImagePreloader({ children }: { children: React.ReactNode }) {
+  // Memoize image paths to prevent recreation on every render
+  const imagePaths = useMemo(() => getAllImagePaths(), []);
   useImagePreloader(imagePaths);
 
   return <>{children}</>;
 }
+
+// Memoize the component to prevent re-renders
+export default memo(ImagePreloader);
