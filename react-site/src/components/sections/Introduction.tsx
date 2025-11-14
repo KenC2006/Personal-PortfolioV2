@@ -114,9 +114,9 @@ export default function Introduction() {
                     <Image
                       src="/res/chestpin.png"
                       alt="Badge"
-                      width={120}
-                      height={120}
-                      className="w-24 h-24 lg:w-32 lg:h-32 object-contain drop-shadow-xl"
+                      width={100}
+                      height={100}
+                      className="w-20 h-20 lg:w-28 lg:h-28 object-contain drop-shadow-xl"
                     />
                   </div>
                 </div>

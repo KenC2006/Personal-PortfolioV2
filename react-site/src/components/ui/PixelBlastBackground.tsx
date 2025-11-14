@@ -24,12 +24,12 @@ function PixelBlastBackground() {
   // Memoize the props object to prevent PixelBlast re-initialization
   const pixelBlastProps = useMemo(() => ({
     variant: "circle" as const,
-    pixelSize: 10,
+    pixelSize: 6,
     color: "#22D3EE",
     className: "",
     style: {},
-    patternScale: 3,
-    patternDensity: 1.2,
+    patternScale: 2,
+    patternDensity: 1.5,
     pixelSizeJitter: 0.5,
     enableRipples: false,
     rippleSpeed: 0.4,
