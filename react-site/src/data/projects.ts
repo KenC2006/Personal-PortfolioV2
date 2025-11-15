@@ -23,7 +23,7 @@ export const projects: Project[] = [
     timeframe: "Jun 2025 - Present",
     tech: ["React", "Node.js", "Firebase", "Cloud"],
     preview:
-      "Real-time stock trading simulator with dynamic leaderboard for UofT students",
+      "Real-time stock trading simulator with dynamic leaderboard",
     details: [
       "Stocker is a full stack stock trading simulator. It features real-time trading, monthly contests, and a profit leaderboard to compete against friends. It uses the Finnhub API to pull stock data and deploys cloud scripts for leaderboard updates, with backend data passed to Firebase. For the frontend, I used React with Charka UI, while backend scripting was done with Node.js.",
     ],
@@ -76,9 +76,9 @@ export const projects: Project[] = [
     title: "Hyper Cube",
     timeframe: "June 2023 - July 2023",
     preview:
-      "Hyper cube built using an ESP32 board and two-way reflective mirrors.",
+      "Hyper cube built using an ESP32 board and two-way mirrors.",
     details: [
-      "Designed a 3D-printed cube with addressable LED strips and two-way mirrors to create a hypercube light illusion. Powered by an ESP32 running WLED, it allows for dynamic effects, brightness control, and programmable pattern. 3D print STL's and wiring diagrams are on the Github.",
+      "I designed and built a 3D-printed hypercube with LED strips and two-way mirrors. I used an ESP32 board to upload WLED for dynamic lighting effects, brightness control, and programmable patterns. All the STLs and wiring diagrams that I made can be found on my github.",
     ],
     image: "/res/cube.png",
     tech: ["Arduino", "C++", "Fusion 360", "Soldering"],
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     timeframe: "Apr 2022 - Mar 2022",
     preview: "Remote control car made with Arduino and bluetooth mobile app.",
     details: [
-      "Parts included wires, a 12V battery cartridge, 4 DC motors, a HC-05 chip (bluetooth receiver), Arduino UNO, and L298N motor driver chip. The wires from the DC motors on each side were grouped together and connected to the corresponding ports on the dual motor driver chip. For Bluetooth control, an app was developed using MIT App Inventor for pairing and communication. The app sent text commands when buttons were pressed, which the Arduino interpreted to control the motors accordingly. For a full document breakdown, visit the GitHub.",
+      "Parts included a 12V battery cartridge, 4 DC motors, a HC-05 chip (bluetooth receiver), Arduino UNO, and L298N motor driver chip. The wires from the DC motors on each side were grouped together and connected to the corresponding ports on the dual motor driver chip. For Bluetooth control, an app was developed using MIT App Inventor for pairing and communication. The app sent text commands when buttons were pressed, which the Arduino interpreted to control the motors.",
     ],
     image: "/res/car.png",
     tech: ["Arduino", "C++", "App Dev", "Soldering"],
