@@ -1,11 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks, contactLinks } from "@/data/constants";
-import { memo, useCallback, useState, useEffect } from "react";
+import { memo, useCallback } from "react";
 
 const iconMap = {
   github: Github,
@@ -16,11 +15,6 @@ const iconMap = {
 
 function Navigation() {
   const pathname = usePathname();
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true);
-  }, []);
 
   const handleResumeDownload = useCallback(() => {
     const link = document.createElement("a");
@@ -32,12 +26,7 @@ function Navigation() {
   }, []);
 
   return (
-    <motion.nav
-      initial={hasAnimated ? false : { y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 bg-gradient-to-r from-black/90 via-zinc-900/85 to-black/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/40 z-50"
-    >
+    <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r from-black/90 via-zinc-900/85 to-black/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/40 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 sm:gap-4 lg:gap-8">
@@ -85,7 +74,7 @@ function Navigation() {
           </div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
 
