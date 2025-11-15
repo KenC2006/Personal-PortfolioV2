@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks, contactLinks } from "@/data/constants";
-import { memo, useCallback } from "react";
+import { memo, useCallback, useState, useEffect } from "react";
 
 const iconMap = {
   github: Github,
@@ -16,6 +16,11 @@ const iconMap = {
 
 function Navigation() {
   const pathname = usePathname();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    setHasAnimated(true);
+  }, []);
 
   const handleResumeDownload = useCallback(() => {
     const link = document.createElement("a");
@@ -28,7 +33,7 @@ function Navigation() {
 
   return (
     <motion.nav
-      initial={{ y: -100, opacity: 0 }}
+      initial={hasAnimated ? false : { y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 bg-gradient-to-r from-black/90 via-zinc-900/85 to-black/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/40 z-50"
